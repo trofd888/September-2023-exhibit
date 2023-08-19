@@ -26,10 +26,22 @@
         </h2>
     </header>
     <section>
-        
+      const imageElement = document.getElementById('image');
+const imageUrls = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // Add more URLs as needed
+let currentIndex = 0;
 
-    </body>
-    </html>
+function changeImage() {
+  currentIndex = (currentIndex + 1) % imageUrls.length;
+  imageElement.src = imageUrls[currentIndex];
+  imageElement.alt = `Image ${currentIndex + 1}`;
+}
+
+const interval = 5000; // Change image every 5 seconds (adjust as needed)
+const autoSwitchInterval = setInterval(changeImage, interval);
+
+window.addEventListener('beforeunload', () => {
+  clearInterval(autoSwitchInterval);
+});
     </section>
     <footer>
     _
