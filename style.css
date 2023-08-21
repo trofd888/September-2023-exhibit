@@ -79,3 +79,16 @@ h1 {
     color: #FF8811;
     text-shadow: 0px 1px 0px #E15634, 0px 2px 0px #E95F34, 0px 3px 0px #F85A3E, 0px 4px 0px #F06734, 0px 5px 0px #FF7733, 0px 6px 5px #E46546;
 }
+
+.maindiv {
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('Images/vege\ bowl.webp');
+  background-size: 100% 100%;
+  box-shadow: 1px 2px 10px black;
+}
