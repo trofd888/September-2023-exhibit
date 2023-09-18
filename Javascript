@@ -1,0 +1,35 @@
+// script.js
+const slider = document.querySelector(".slider");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let slideIndex = 0;
+
+// Function to show a specific slide
+function showSlide(index) {
+    if (index < 0) {
+        slideIndex = slider.childElementCount - 1;
+    } else if (index >= slider.childElementCount) {
+        slideIndex = 0;
+    }
+
+    const translateX = -slideIndex * 100;
+    slider.style.transform = `translateX(${translateX}%)`;
+}
+
+// Event listeners for previous and next buttons
+prevBtn.addEventListener("click", () => {
+    slideIndex--;
+    showSlide(slideIndex);
+});
+
+nextBtn.addEventListener("click", () => {
+    slideIndex++;
+    showSlide(slideIndex);
+});
+
+// Auto slide
+setInterval(() => {
+    slideIndex++;
+    showSlide(slideIndex);
+}, 5000); // Change slide every 5 seconds
