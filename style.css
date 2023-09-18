@@ -24,7 +24,7 @@ section{
   background-color: cyan;
   border-color: red;
   border-style: outset;
-  margin: 20px 10px 20px 10px;
+  margin: 20px 0px 0px 0px
 }
 
 footer {
@@ -79,16 +79,23 @@ h1 {
     color: #FF8811;
     text-shadow: 0px 1px 0px #E15634, 0px 2px 0px #E95F34, 0px 3px 0px #F85A3E, 0px 4px 0px #F06734, 0px 5px 0px #FF7733, 0px 6px 5px #E46546;
 }
+.layout {
+  width: 100%;
 
+  display: flex;
+  gap: 16px;
+}
+
+.grow1 { flex-grow: 1; }
 .maindiv {
   width: 50%;
   height: 200px;
-  position: absolute;
   top: 60%;
   left: 50%;
   right: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(50%,10%);
   background-image: url('Images/vege\ bowl.webp');
   background-size: 100% 100%;
   box-shadow: 1px 2px 10px black;
+  animation:slider 1s infinite linear;
 }
